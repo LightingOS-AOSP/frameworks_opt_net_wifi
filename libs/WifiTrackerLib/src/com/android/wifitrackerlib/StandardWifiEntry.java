@@ -602,7 +602,7 @@ public class StandardWifiEntry extends WifiEntry {
             switch (mTargetWifiConfig.macRandomizationSetting) {
                 case WifiConfiguration.RANDOMIZATION_NONE:
                     return PRIVACY_DEVICE_MAC;
-                case WifiConfiguration.RANDOMIZATION_ALWAYS:
+                case WifiConfiguration.RANDOMIZATION_NON_PERSISTENT:
                     return PRIVACY_RANDOMIZATION_ALWAYS;
                 default:
                     // WifiConfiguration.RANDOMIZATION_AUTO and WifiConfiguration.RANDOMIZATION_PERSISTENT
@@ -632,7 +632,7 @@ public class StandardWifiEntry extends WifiEntry {
             case PRIVACY_DEVICE_MAC:
                 return WifiConfiguration.RANDOMIZATION_NONE;
             default:
-                return WifiConfiguration.RANDOMIZATION_ALWAYS;
+                return WifiConfiguration.RANDOMIZATION_NON_PERSISTENT;
         }
     }
 
